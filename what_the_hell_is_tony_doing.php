@@ -22,6 +22,7 @@ $file = __FILE__;
 require_once dirname($file) . '/Twitter-PHP/twitter.class.php';
 require_once dirname($file) . '/bitly/bitly.php';
 
+# http://fbcmd.dtompkins.com/
 $fbcmd = '/home/tony/.fbcmd/bin/fbcmd';
 
 
@@ -31,14 +32,14 @@ define('DB_NAME', '');
 define('DB_PASSWD', '');
 define('DB_HOST', 'localhost');
 
-# Twitter oath API keys
+# Twitter oauth API keys
 # https://dev.twitter.com/
 $consumerKey = '';
 $consumerSecret = '';
 $accessToken = '';
 $accessTokenSecret = '';
 
-# Legacy Bitly API Key (may need to to latest API soon)
+# Legacy Bitly API Key (may need to update to latest API soon)
 # http://dev.bitly.com
 $bitly_username = '';
 $bitly_apikey = '';
