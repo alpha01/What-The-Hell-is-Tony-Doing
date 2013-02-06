@@ -49,7 +49,8 @@ $bitly_apikey = '';
 $RSS_FEEDS = array(
 		1 => 'https://www.rubysecurity.org/rss.xml',
                 2 => 'http://www.rubyninja.org/feed/',
-		3 => 'https://www.rubysecurity.org/photos/index.php/rss/feed/gallery/latest');
+		3 => 'https://www.rubysecurity.org/photos/index.php/rss/feed/gallery/latest',
+		4 => 'https://www.rubysecurity.org/books.xml');
 
 
 
@@ -128,6 +129,9 @@ foreach($RSS_FEEDS as $social_media_id => $feed) {
 								break;
 							case 'https://www.rubysecurity.org/photos/index.php/rss/feed/gallery/latest':
 								$post_topic = 'Photo';
+								break;
+							case 'https://www.rubysecurity.org/books.xml':
+								$post_topic = 'Book Review';
 								break;
 						}
 						$bitly_object = new Bitly($bitly_username, $bitly_apikey);
