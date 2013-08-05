@@ -80,7 +80,12 @@ foreach($RSS_FEEDS as $social_media_id => $feed) {
 	}
 	
 
-	$xml_feed = simplexml_load_file($feed);
+	$xml_feed = @simplexml_load_file($feed);
+	if ($xml_feed == false) {
+		echo "Unable to get feed $feed\n";
+		continue;
+	}
+
 	foreach ($xml_feed->channel->children() as $t) {
 		$sql_str = array('social_media_id' => $social_media_id);
 		$sql_columns = array('social_media_id');
