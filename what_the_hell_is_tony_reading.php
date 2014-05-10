@@ -56,7 +56,7 @@ if(file_exists($log_file)) {
             spam_my_friends("Tony started reading {$book_info[$i]['title']}");
             continue;
         } elseif($logged_book_info[$i]['page_end'] != $book_info[$i]['page_end']) {
-            spam_my_friends('Tony finished reading ' . ($logged_book_info[$i]['page_end'] - $book_info[$i]['page_end']) . ' page(s) on ' . $book_info[$i]['title']);
+            spam_my_friends('Tony finished reading ' . ($book_info[$i]['page_end'] - $logged_book_info[$i]['page_end']) . ' page(s) on ' . $book_info[$i]['title']);
         } else {
             echo "No update\n";
         }
